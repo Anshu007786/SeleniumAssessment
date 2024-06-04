@@ -1,0 +1,18 @@
+The Selenium automated tests were conducted to validate the functionality of a web application developed using ASP.NET Core MVC. The application features a form with input fields for user's name, email, phone, and an optional company name. The tests were designed to ensure the web page loads correctly, the form can be submitted, and the welcome message is displayed accurately. The tests were executed in three scenarios: "TestPageLoadsSuccessfully", "TestFormSubmission", and "TestFormSubmissionWithDelay".
+
+Test Cases
+1. TestPageLoadsSuccessfully: This test case verifies that the web page loads successfully by checking the title of the page.
+2. TestFormSubmission: This test case checks if the form can be filled and submitted, and it verifies that the welcome message is displayed with the correct user name.
+3. TestFormSubmissionWithDelay: This test case simulates a delay in displaying the welcome message and ensures that the message is eventually displayed correctly.
+
+Results
+- TestPageLoadsSuccessfully: Passed
+  - The test successfully navigated to `https://localhost:5001/` and verified that the page title contains "Home Page."
+
+- TestFormSubmission: Passed
+  - The test navigated to the web application, filled in the required fields (Name, Email, Phone), left the optional Company Name field empty, and submitted the form. The welcome message "Welcome, Random 1!" was displayed correctly.
+  
+- TestFormSubmissionWithDelay: Passed
+  - The test navigated to the web application, filled in the required fields (Name, Email, Phone), left the optional Company Name field empty, and submitted the form. After a simulated delay of 3 seconds, the welcome message "Welcome, Random 2!" was displayed correctly.
+
+The results showed that all tests successfully executed and validated the specified functionalities of the web application. The setup of Selenium WebDriver with ChromeDriver, including handling SSL certificate errors using ChromeOptions, was effective in running the tests without encountering SSL-related issues. The application correctly handled both immediate and delayed display of the welcome message upon form submission.
